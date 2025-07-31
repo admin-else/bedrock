@@ -92,7 +92,7 @@ static inline int nextBoundInt(X *x, const int bound) {
 
     if (n < (uint32_t)bound) {
         // Calculate remainderUnsigned(~bound + 1, bound)
-        uint32_t remainder = (uint32_t)(~bound + 1) % (uint32_t)bound;
+        const uint32_t remainder = (uint32_t)(~bound + 1) % (uint32_t)bound;
 
         while (n < remainder) {
             l = (uint32_t)nextInt(x);
